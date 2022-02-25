@@ -1,6 +1,7 @@
 package admin;
 import domain.User;
 import java.util.List;
+import java.util.ArrayList;
 
 public class UserAdministration {
 	private List<User> userList= new ArrayList<>();
