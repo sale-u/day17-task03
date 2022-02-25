@@ -32,7 +32,7 @@ public class UserAdministration {
 	
 	
 	public boolean updateUser(User user, User userForUpdate) {
-		if(containsUser(user)) {
+		if(containsUser(user.getUsername())) {
 			int index= userList.indexOf(user);
 			userList.set(index, userForUpdate);
 			return true;
@@ -41,7 +41,7 @@ public class UserAdministration {
 	}
 	
 	public boolean removeUser(User user) {
-		if(containsUser(user)) {
+		if(containsUser(user.getUsername())) {
 			userList.remove(user);
 			return true;
 		}
