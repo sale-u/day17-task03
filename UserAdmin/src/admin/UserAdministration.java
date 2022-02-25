@@ -29,15 +29,12 @@ public class UserAdministration {
 		return true;
 	}
 	
-	public User setUser(String name, String lastName, String username) {
-		return new User(name, lastName, username, null, null);
-	}
 	
-	public boolean updateUser(User user) {
+	public boolean updateUser(User user, User userForUpdate) {
 		if(containsUser(user)) {
 			int index= userList.indexOf(user);
-			//User updatedUser= setUser(/* ovde mozda da idu podaci iz skenera */);
-			userList.set(index, updatedUser);
+			userList.set(index, userForUpdate);
+			return true;
 		}
 		return false;
 	}
