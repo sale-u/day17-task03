@@ -1,3 +1,4 @@
+package admin;
 import domain.User;
 import java.util.List;
 
@@ -28,9 +29,20 @@ public class UserAdministration {
 		return true;
 	}
 	
-	public boolean updateUser(User user) {
+	
+	public boolean updateUser(User user, User userForUpdate) {
 		if(containsUser(user)) {
-			//User userToChange= userList.get(userList.indexOf(user));
+			int index= userList.indexOf(user);
+			userList.set(index, userForUpdate);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean removeUser(User user) {
+		if(containsUser(user)) {
+			userList.remove(user);
+			return true;
 		}
 		return false;
 	}

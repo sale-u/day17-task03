@@ -17,6 +17,17 @@ public class User {
 		this.password = password;
 		this.userType = userType;
 	}
+	
+	public static boolean checkPassword(String password) {
+		if (password == null || password.equals("")) return false;
+		
+		if (Character.isDigit(password.charAt(0))) return false;  // prvi karakter mora biti slovo
+		
+		for (int i = 1; i < password.length(); i++) {
+			if (Character.isDigit(password.charAt(0))) return true;
+		}
+		return false;
+	}
 
 
 	public String getIme() {
