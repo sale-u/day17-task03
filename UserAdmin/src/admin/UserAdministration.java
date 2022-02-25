@@ -39,6 +39,14 @@ public class UserAdministration {
 		return false;
 	}
 	
+	public boolean removeUser(User user) {
+		if(containsUser(user)) {
+			userList.remove(user);
+			return true;
+		}
+		return false;
+	}
+	
 	
 	
 	private boolean containsUser(User user) {
