@@ -47,6 +47,15 @@ public class UserAdministration {
 		return false;
 	}
 	
+	public User getUser(String name) {
+		for(User u: userList) {
+			if(u.getIme().equals(name)) {
+				return u;
+			}
+		}
+		return null;
+	}
+	
 	
 	
 	private boolean containsUser(User user) {
