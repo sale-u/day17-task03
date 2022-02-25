@@ -49,7 +49,7 @@ public class UserAdministration {
 	
 	public User getUser(String username) {
 		for(User u: userList) {
-			if(u.getUsername().equals(name)) {
+			if(u.getUsername().equals(username)) {
 				return u;
 			}
 		}
