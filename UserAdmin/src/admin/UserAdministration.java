@@ -19,13 +19,13 @@ public class UserAdministration {
 	
 	public boolean addUser(User user) {
 		for(User u: userList) {
-			if(u.getName().equals(user.getName())) {
-				System.out.println("User with name "+user.getName()+" already exists");
+			if(u.getIme().equals(user.getIme())) {
+				System.out.println("User with name "+user.getIme()+" already exists");
 				return false;
 			}
 		}
 		this.userList.add(user);
-		System.out.println("User "+user.getName()+" successfully added");
+		System.out.println("User "+user.getIme()+" successfully added");
 		return true;
 	}
 	
