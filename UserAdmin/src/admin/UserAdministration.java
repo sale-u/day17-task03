@@ -59,7 +59,7 @@ public class UserAdministration {
 	
 	
 	
-	public boolean containsUser(User username) {
+	public boolean containsUser(String username) {
 		return ((getUser(username)!=null)?true:false);
 	}
 }
