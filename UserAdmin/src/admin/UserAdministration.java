@@ -1,3 +1,4 @@
+package admin;
 import domain.User;
 import java.util.List;
 
@@ -28,9 +29,15 @@ public class UserAdministration {
 		return true;
 	}
 	
+	public User setUser(String name, String lastName, String username) {
+		return new User(name, lastName, username, null, null);
+	}
+	
 	public boolean updateUser(User user) {
 		if(containsUser(user)) {
-			//User userToChange= userList.get(userList.indexOf(user));
+			int index= userList.indexOf(user);
+			//User updatedUser= setUser(/* ovde mozda da idu podaci iz skenera */);
+			userList.set(index, updatedUser);
 		}
 		return false;
 	}
