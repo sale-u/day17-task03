@@ -24,7 +24,7 @@ public class User {
 		if (Character.isDigit(password.charAt(0))) return false;  // prvi karakter mora biti slovo
 		
 		for (int i = 1; i < password.length(); i++) {
-			if (Character.isDigit(password.charAt(0))) return true;
+			if (Character.isDigit(password.charAt(i))) return true;
 		}
 		return false;
 	}

@@ -44,6 +44,7 @@ public class Main {
 			System.out.println("Dobrodosao korisnice : " + currUser.getUsername());
 			if (currUser.getUserType() == UserType.ADMIN) {
 				AdminMenu adminMenu = new AdminMenu(scanner, ua, currUser);
+				adminMenu.adminMenu();
 			}
 		}
 
